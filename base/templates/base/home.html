@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron-fluid">
+    <h1 class="display-3 text-center">Welcome to the Book Archive</h1>
+    <p class="lead text-center">Feel free to explore the genres and books!</p>
+    <hr class="my-4">
+    <h2 class="text-center mb-4">Books</h2>
+    <div class="container">
+        <div class="row">
+            {% for book in books %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.title }}</h5>
+                        <p class="card-text">Author: {{ book.author }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
